@@ -9,9 +9,9 @@ namespace APi.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    public class MembersController(ApplicationDbContext context) : ControllerBase
+    public class MembersController(ApplicationDbContext _context) : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetMembers()
