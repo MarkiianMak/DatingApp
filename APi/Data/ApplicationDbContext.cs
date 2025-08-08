@@ -16,9 +16,5 @@ public class ApplicationDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<Models.User>().ToTable("Users");
-        modelBuilder.Entity<Models.User>().HasData(
-            new Models.User { Id = "bob-bo", Name = "testuser1" },
-            new Models.User { Id = "alice-smith", Name = "testuser2" }
-        );
     }
 }

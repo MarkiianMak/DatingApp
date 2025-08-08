@@ -1,15 +1,15 @@
 using APi.Data;
 using APi.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace APi.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [Authorize]
 
-    public class MembersController(ApplicationDbContext _context) : ControllerBase
+    public class MembersController(ApplicationDbContext _context) : BaseApiController
     {
 
 

@@ -10,6 +10,7 @@ import { lastValueFrom } from 'rxjs';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
 export class App implements OnInit {
 
   private http = inject(HttpClient);
